@@ -44,6 +44,7 @@ dealbtn.addEventListener("click", function() {
                          .then(res => res.json())
                          .then(oneDraw => {
                             playerHand[index].src = oneDraw.cards[0].image;
+                            data.cards[index] = oneDraw.cards[0];
                          })
                      }, {once : true});
                     })
